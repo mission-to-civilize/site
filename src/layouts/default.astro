@@ -1,11 +1,15 @@
-<!DOCTYPE html>
+---
+const { frontmatter } = Astro.props
+---
+
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Misson To Civilize</title>
+    <title>{frontmatter.title}</title>
 
-    <style>
+    <style is:global>
       body > * {
         margin: 0 auto;
         max-width: 640px;
@@ -41,9 +45,7 @@
     </style>
 
     <!-- Privacy-friendly analytics by Plausible -->
-    <script
-      async
-      src="https://plausible.io/js/pa-a0gF4Y2PtBko3ZskpbUEn.js"
+    <script async src="https://plausible.io/js/pa-a0gF4Y2PtBko3ZskpbUEn.js"
     ></script>
     <script>
       ;(window.plausible =
@@ -60,18 +62,6 @@
     </script>
   </head>
   <body>
-    <h1>Misson to Civilize</h1>
-    <p>
-      Mission to Civilize is an organization of developers, designers and
-      product people whose only stakeholders are the people we help. Our goal is
-      to use technology to fullfill the promise of the Internet and bring access
-      to information and tools that work toward the betterment of society.
-    </p>
-
-    <p>
-      <a href="https://github.com/orgs/mission-to-civilize/discussions"
-        >Get Involved</a
-      >
-    </p>
+    <slot />
   </body>
 </html>
