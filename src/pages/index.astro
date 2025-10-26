@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/default.astro'
+---
+
+<Layout title="Mission to Civilize">
+  <main>
+    <h1>Mission to Civilize</h1>
+    <p>
+      Mission to Civilize is an organization of developers, designers and
+      product people whose only stakeholders are the people we help. Our goal is
+      to use technology to fullfill the promise of the Internet and bring access
+      to information and tools that work toward the betterment of society.
+    </p>
+    <p>
+      <a href="https://github.com/mission-to-civilize">Get Involved</a>
+    </p>
+  </main>
+
+  <style>
+    main {
+      @apply mx-auto 
+        max-w-[75ch] 
+        pt-16 
+        px-8 
+        font-sans;
+    }
+
+    h1 {
+      @apply p-8 
+      text-center 
+      text-3xl 
+      font-display;
+    }
+
+    p {
+      @apply mb-8 
+      leading-7;
+    }
+
+    a {
+      @reference '../styles/global.css';
+      @apply inline-block 
+        text-white 
+        font-bold
+        bg-gray-800 
+        py-2 
+        px-4 
+        rounded-sm 
+        no-underline
+        uppercase 
+        transition 
+        duration-300 
+        ease-in-out 
+        hover:bg-gray-600;
+    }
+  </style>
+</Layout>
